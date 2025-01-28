@@ -4,6 +4,17 @@
 
   <!-- edit the properties of this plugin in the file `gradle.properties` -->
   <property file="${basedir}/gradle.properties"/>
+    <!-- enter the *lowest* JOSM version this plugin is currently compatible with -->
+    <property name="plugin.main.version" value="17084"/>
+    
+    <!-- Configure these properties (replace "..." accordingly).
+         See https://josm.openstreetmap.de/wiki/DevelopersGuide/DevelopingPlugins
+    -->
+    <property name="plugin.author" value="Taylor Smock &lt;incoming+gokaart/JOSM_validations_testing@incoming.gitlab.com&gt;"/>
+    <property name="plugin.class" value="org.openstreetmap.josm.plugins.validations_testing.ValidationsTestingPluginTest"/>
+    <property name="plugin.description" value="A plugin for testing validations, which may be included in future JOSM versions"/>
+    <property name="plugin.link" value="https://github.com/JOSM/validations_testing"/>
+    <property name="plugin.canloadatruntime" value="true"/>
 
   <!-- ** include targets that all plugins have in common ** -->
   <import file="../build-common.xml"/>
