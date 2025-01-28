@@ -12,6 +12,12 @@ on:
       - $default-branch
   workflow_dispatch:
 
+permissions:
+  id-token: write
+  attestations: write
+  contents: write
+  packages: write
+
 jobs:
   check-release-needed:
     runs-on: ubuntu-latest
@@ -42,7 +48,7 @@ jobs:
     strategy:
       matrix:
         josm-revision: ["", "r17084"]
-    uses: JOSM/JOSMPluginAction/.github/workflows/ant.yml@v2
+    uses: JOSM/JOSMPluginAction/.github/workflows/ant.yml@v3
     with:
       josm-revision: ${{ matrix.josm-revision }}
       java-version: 11
