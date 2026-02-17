@@ -6,3 +6,4 @@
 .settings
 /build/
 javadoc
+checkstyle-josm-validations_testing.xml
